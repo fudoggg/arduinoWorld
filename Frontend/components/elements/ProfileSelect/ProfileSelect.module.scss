@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+@import '../../../styles/template';
+
+.profile_select{
+    @extend %uncopyable-shared;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+
+    min-width: max-content;
+
+    // &:hover{background: $light_grey;}
+
+    svg{
+        height: 24px;
+        width: 24px;
+        margin-right: 8px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .select_wrapper{
+        z-index: 10;
+        position: absolute;
+        display: none;
+        top: 40px;
+        background: $profile_select;
+        border-radius: 10px;
+        
+        .select{
+            padding: 10px 20px;
+            min-width: 150px;
+            border-bottom: 1px solid $border;
+            &:hover{background: $catalog;}
+            &:first-child{border-radius: 10px 10px 0 0;}
+            &:last-child{border-bottom: 0; border-radius: 0 0 10px 10px;}
+        }
+
+    }
+
+    .active{display: block;}
+}

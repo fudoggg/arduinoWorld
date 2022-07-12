@@ -1,0 +1,17 @@
+@import '../../../../styles/variables';
+
+.main_container_wrapper{
+    display: grid;
+    // grid-template-rows: 112px 1fr 196px ;
+    grid-template-rows: max-content 1fr;
+    min-height: 100vh;
+
+    background: $page;
+
+    .header{
+    }
+
+    .content{
+        padding: 48px clamp(10px, 10vw, 118px) 110px clamp(10px, 10vw, 118px);
+    }
+}

@@ -1,0 +1,43 @@
+@import "../../../styles/variables";
+@import "../../../styles/template";
+
+.upload__wrapper {
+    input[type="file"] {display: none}
+    .images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 26px;
+    }
+    .header__upload{
+        display: flex;
+        justify-content: space-between;
+        p {margin-bottom: 15px;}
+
+    }
+    .custom__file__upload {
+        border: 1px solid #ccc;
+        display: flex;
+        padding: 6px 12px;
+        cursor: pointer;
+        height: 285px;
+        width: 285px;
+        // width: clamp(150px, 13.5vw, 13.5vw);
+        // height: clamp(150px, 28vh, 28vh);
+        border-radius: $borderRadius;
+        text-align: center;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        i{
+            display: block;
+            font-style: normal;
+            @extend %uncopyable-shared;
+        }
+    }
+}
+
+@media all and (max-width: 800px){
+    .custom__file__upload{
+        width: 100% !important;
+    }
+}

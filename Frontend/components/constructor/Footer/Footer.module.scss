@@ -1,0 +1,114 @@
+@import '../../../styles/variables';
+
+.footer_wrapper{
+    display: flex;
+    align-items: center;
+
+    height: 196px;
+    width: 100%;
+    background: $footer;
+    padding: 0 118px;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: $link;
+
+    svg{
+        height: 84px;
+        width: 84px;
+    }
+
+    h1{
+        height: 84px;
+        width: 130px;
+        font-weight: 500;
+        font-size: 35px;
+        color: $link;
+        margin: 0 0 0 10px;
+    }
+
+    .info{
+        width: 100%;
+        display: flex;
+        justify-content:  space-between;
+        gap: 10px;
+        height: 84px;
+        margin-left: 46px;
+        padding-left: 46px;
+        border-left: 2px solid $link;
+
+        &__block{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .menu{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+    
+                text-align: center;
+
+                p{cursor: pointer;}
+                p:hover {color: $hover;}
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .footer_wrapper{
+        padding: 0 clamp(10px, 12vw, 118px);
+        svg{
+            height: clamp(50px, 8vw, 84px);
+            width: clamp(50px, 8vw, 84px);
+        }
+        h1{
+            display: flex;
+            align-items: center;
+            font-size: clamp(20px, 3vw, 35px);
+        }
+        p{font-size: clamp(12px, 2vw, 16px);}
+
+
+        .info{
+            margin-left: 30px;
+            padding-left: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer_wrapper{
+        height: 120px;
+        padding: 0 clamp(10px, 10vw, 118px);
+
+        & > div > svg{display: none;}
+        div:last-child > div:last-child{display: none;}
+
+        .info{
+            margin-left: 0;
+            padding-left: clamp(15px, 5vw, 35px);
+
+            &__block, &__block .menu{gap: 5px;}
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .footer_wrapper{
+        padding: 0 clamp(10px, 10vw, 118px);
+
+        .info{
+            padding-left: clamp(25px, 5vw, 35px);
+            
+            &__block .menu{
+                flex-direction: column;
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
+        }
+    }
+}

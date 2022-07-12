@@ -1,0 +1,14 @@
+@import '../../../styles/template';
+@import '../../../styles/variables';
+
+.stars_wrapper{
+  p, span{
+      line-height: 15px;
+      font-size: 14px !important;
+      margin: 0 !important;
+  }
+
+  span{color: $link}
+}
+
+._feedback img{cursor: pointer;}

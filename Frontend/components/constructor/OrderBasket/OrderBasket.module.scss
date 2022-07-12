@@ -1,0 +1,53 @@
+@import '../../../styles/variables';
+
+.order_basket_wrapper{
+    width: 263px;
+
+    & > p{
+        color: $main_theme;
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 14px;
+        cursor: pointer;
+
+        &:hover{color: $hover;}
+    }
+
+    .white_block{
+        
+        // width: 13.7vw;
+        min-width: 150px;
+        padding: 24px 20px 20px 20px;
+        color: $black;
+    
+        background: $text_header;
+        border-radius: 10px;
+    
+        .title{
+            color: $text;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $catalog;
+            margin-bottom: 20px;
+    
+            h1{
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+            }
+        }
+    
+        .list h2{
+            margin: 22px 0 48px 0;
+            color: $text;
+            font-size: 24px;
+            font-weight: 500;
+        } 
+    }
+}
+
+@media all and (max-width: 900px) {
+    .order_basket_wrapper{
+        width: auto;
+    }
+}

@@ -1,0 +1,16 @@
+@import '../../variables';
+@import '../../template';
+
+.profile_wrapper{
+
+    h2{
+        margin-bottom: 20px;
+    }
+
+    span{
+        cursor: pointer;
+        color: $link;
+
+        &:hover{color: $hover;}
+    }
+}

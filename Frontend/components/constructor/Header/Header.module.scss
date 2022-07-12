@@ -1,0 +1,90 @@
+@import '../../../styles/variables';
+@import '../../../styles/template';
+
+.header_wrapper{
+    height: 64px;
+    background: $text_header;
+    padding: 0 118px;
+
+    display: grid;
+    align-items: center;
+
+    .left_block{
+        display: flex;
+        align-items: center;
+
+        svg{width: 40px;}
+        div{
+            width: 100%;
+            margin-left: 15px;
+            display: flex;
+            // justify-content: center;
+
+            h2{
+                color: $main_theme;
+                cursor: pointer;
+            }
+
+            input{width: 70%;}
+        }
+        
+    }
+
+    .right_block{
+        display: flex;
+        gap: 110px;
+        gap: clamp(10px, 10vw * 0.6, 110px);
+    }
+
+    svg{cursor: pointer;}
+
+    input[type='text']{
+        padding: 8px 12px;
+        border: 1px solid #CAD9DA;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header_wrapper{
+        padding: 0 clamp(10px, 12vw, 118px);
+        .left_block{
+            h2{font-size: clamp(12px, 2vw, 24px);}
+        } 
+        .right_block{
+            gap: clamp(10px, 2vw, 110px);
+            p{font-size: clamp(7px, 1.5vw, 16px);}
+            svg{width: clamp(16px, 2.5vw, 24px);}
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header_wrapper{
+        padding: 0 clamp(10px, 10vw, 118px);
+        .left_block{
+            div{display: none}
+        } 
+        .right_block{
+            p{font-size: clamp(7px, 2.5vw, 16px);}
+            svg{width: clamp(16px, 5vw, 24px);}
+            & > div > p{display: none;}
+
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header_wrapper{
+        padding: 0 clamp(10px, 10vw, 118px);
+        .left_block{
+            svg{width: 32px;}
+            div{display: none}
+        } 
+        .right_block{
+            p{font-size: clamp(7px, 3.5vw, 16px);}
+            & > div > p{display: none;}
+
+        }
+    }
+}

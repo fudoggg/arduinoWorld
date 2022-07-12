@@ -1,0 +1,29 @@
+@import "variables";
+
+// %block-shared {
+// 	background: $blockBackground;
+// 	box-shadow: 0px 10px 25px #00000012;
+// 	border-radius: $borderRadius;
+// }
+
+%overflow-shared {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+%uncopyable-shared {
+	moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+
+%hide-arrows-shared {
+	input[type=number] {-moz-appearance: textfield}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}

@@ -1,0 +1,38 @@
+@import '../../../styles/template';
+@import '../../../styles/variables';
+
+.row_wrapper{
+    border-radius: 10px;
+    // background: $text_header;
+
+    .row{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 1fr 1fr 1fr;
+        gap: 15px;
+        align-items: center;
+        border-bottom: 1px solid $border;
+        padding: 20px;
+        
+
+        
+
+        &:last-child{
+            border-bottom: 0;
+        }
+    }
+}
+
+.active{
+    cursor: pointer;
+
+    &:hover .row{
+        border-radius: 10px;
+        background: $light_grey;
+    }
+}
+
+@media all and (max-width: 800px){
+    .row{
+        //display: block !important;
+    }
+}

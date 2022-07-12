@@ -1,0 +1,29 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/template';
+
+.admin_header_wrapper{
+    
+
+    .header{
+        @extend %uncopyable-shared;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 80px;
+        background: $main_theme;
+        padding: 0px clamp(10px, 10vw, 118px) 0px clamp(10px, 10vw, 118px);
+
+        color: $text_header;
+        font-family: 'Roboto';
+
+        h1{margin: 0;}
+
+        span{
+            cursor: pointer;
+            &:hover{color: $active;}
+        }
+    
+    }
+
+}

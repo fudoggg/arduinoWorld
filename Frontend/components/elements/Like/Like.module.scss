@@ -1,0 +1,42 @@
+@import '../../../styles/variables';
+
+.like_wrapper{
+    height: 50px;
+    width: 50px;
+    border: 1px solid $border;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+        height: 26px;
+        width: 26px;
+
+        path{
+            stroke: $main_theme;
+            fill: none;
+        }
+    }
+}
+
+.active{
+    background: $active;
+    
+    svg {
+        height: 26px;
+        width: 26px;
+
+        path{fill: $main_theme;}
+    }
+}
+
+//заглушка
+.cart{
+    svg path{
+        stroke: none;
+        fill: $main_theme;
+    }
+}

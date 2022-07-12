@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+
+.upper_header_wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    height: 48px;
+    background: $main_theme;
+    padding: 0 120px;
+
+    color: $text_header;
+    font-family: 'Roboto';
+        
+    .menu{
+        display: flex;
+        padding-left: 60px;
+        
+        a{
+            cursor: pointer;
+            margin-right: 20px;
+            user-select: none;
+
+            &:last-child{margin-right: 0;}
+        }
+        
+        a:hover{color: $active;}
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .upper_header_wrapper{padding: 0 clamp(10px, 12vw, 118px);}
+}
+
+@media screen and (max-width: 768px) {
+    .upper_header_wrapper{
+        padding: 0 clamp(10px, 10vw, 118px);
+        a, p, div{font-size: clamp(7px, 2vw, 16px);}
+        .menu{padding-left: clamp(20px, 5vw, 60px);}
+        & > div > svg{display: none;}
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .upper_header_wrapper div:last-child > div:last-child{display: none;}
+}

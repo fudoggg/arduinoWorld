@@ -1,0 +1,82 @@
+@import '../../../styles/variables';
+@import '../../../styles/template';
+
+.profile_info_wrapper{
+    // height: 710px;
+    width: 418px;
+
+    background: $text_header;
+    border-radius: $borderRadius;
+
+    padding: 26px 20px 20px;
+
+    h2{
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .go_out{
+        cursor: pointer;
+        color: $danger;
+
+        &:hover{color: $red;}
+    }
+
+    .user_name_block{
+        display: flex;
+        align-items: center;
+
+        height: 84px;
+        min-width: 50%;
+        padding: 8px 24px;
+
+        background: $text_header;
+        border-radius: $borderRadius;
+        box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
+
+        p{
+            font-size: 24px;
+            // width: max-content;
+        }
+    }
+
+    .profile_info__user_info{
+        margin-top: 28px;
+
+        hr{margin: 20px 0;}
+        span{font-size: 22px;}
+
+        i{
+            display: block;
+            color: $gray_text;
+            font-size: 18px;
+            font-style: normal;
+    
+            margin: 0 0 10px 0;
+        }
+
+        p, input{
+            border: 0;
+            width: 100%;
+            color: $text;
+            font-size: 22px;
+            margin-bottom: 20px;
+            // margin: 10px 0 20px 0;
+
+            &:last-child{margin: 0;}
+        }
+
+        .enter_data{
+            border: 1px solid $border;
+            padding: 6px;
+            border-radius: $borderRadius;
+            // background: red;
+        }
+    }
+}
+
+@media all and (max-width: 900px) {
+    .profile_info_wrapper{
+        width: auto;
+    }
+}

@@ -1,0 +1,38 @@
+@import '../../../styles/template';
+@import '../../../styles/variables';
+
+.shortCard {
+    display: flex;
+    padding: 20px;
+    width: 200px;
+    height: 277px;
+    background: $text_header;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: $borderRadius;
+    
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {width: 160px;}
+
+        &__info {
+            width: 100%;
+
+            p {
+                @extend %overflow-shared;
+                margin-top: 12px;
+                font-size: 20px;
+                color: $text;
+            }
+
+            h1 {
+                margin-top: 10px;
+                font-size: 24px;
+                color: $text;
+            }
+        }
+    }
+}

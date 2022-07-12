@@ -1,0 +1,20 @@
+
+.icon_text{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    min-width: max-content;
+
+    svg, img{
+        height: 24px;
+        width: 24px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    svg, img{ margin-right: 8px;}
+    img:nth-last-child(1){ margin: 0 0 0 8px;}
+}

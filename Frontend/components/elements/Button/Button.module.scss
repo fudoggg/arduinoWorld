@@ -1,0 +1,82 @@
+@import '../../../styles/template';
+@import '../../../styles/variables';
+
+.button_wrapper{
+
+    .fill_block{
+        @extend %uncopyable-shared;
+        padding: 12px 30px;
+        border: 1px solid $border;
+        border-radius: 10px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    
+        p{
+            margin: 0;
+            white-space: nowrap;
+            font-size: 22px;
+            color: $main_theme;
+        }
+    }
+
+    ._active{
+        background: $active;
+    }
+    
+    ._main{
+        background: $main_theme;
+        
+        &:hover{background: $hover;}
+        p{color: $text_header;}
+    }
+    
+    ._danger{
+        background: $danger;
+        
+        &:hover{background: $red;}
+        p{color: $text_header;}
+    }
+    
+    ._basket{
+        background: linear-gradient(223.81deg, #7DDEE1 9.34%, #00979C 95.86%);
+    
+        p{
+            color: $text_header;
+            font-weight: 500;
+            font-size: 18px;
+        }
+    
+        &:hover{
+            background: linear-gradient(0deg, #7DDEE1 9.34%, #00979C 95.86%);
+            
+            p{
+                color: $text_header;
+                font-weight: 500;
+                font-size: 18px;
+            }
+        }
+    }
+
+    ._disabled{
+        background: $disabled;
+
+        p{
+            color: $disabled_text;
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+
+    ._cancel{
+
+        &:hover{background: $disabled;}
+
+        p{
+            font-size: 18px;
+            color: $danger;
+        }
+    } 
+}

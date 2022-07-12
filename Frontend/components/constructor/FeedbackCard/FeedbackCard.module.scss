@@ -1,0 +1,35 @@
+@import '../../../styles/template';
+@import '../../../styles/variables';
+
+.feedback_wrapper{
+    // height: 209px;
+    width: 100%;
+    border: 1px solid $catalog;
+    border-radius: 10px;
+    padding: 20px;
+
+    p{margin-bottom: 0;}
+
+    h1{
+        margin: 36px 0 18px 0;
+        font-weight: 500;
+        font-size: 22px;
+    }
+
+    h2{
+        font-weight: 400;
+        font-size: 24px;
+    }
+
+
+    .line{
+        display: flex;
+        align-items: center;
+
+        span{
+            margin-left: 16px;
+            color: $date;
+        }
+    }
+    
+}

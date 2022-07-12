@@ -1,0 +1,25 @@
+
+
+.index_main_wrapper{
+    // display: grid;
+    // gap: 30px;
+    // grid-template-columns: 0.3fr 0.7fr;
+}
+
+@media screen and (max-width: 1280px) {
+    .index_main_wrapper {
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .index_main_wrapper {
+
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .index_main_wrapper {
+        
+    }
+}

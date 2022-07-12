@@ -1,0 +1,64 @@
+@import '../../../styles/variables';
+@import '../../../styles/template';
+
+.feedback_form_wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $back_color;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .feedback_form_window{
+        width: 600px;
+        background: $text_header;
+        border-radius: 10px;
+        padding: 21px 70px 30px;
+
+        transform: scale(0.1);
+        transition: transform 1s;
+
+        .div_input{
+            width: 100%;
+            & > div { margin-bottom: 16px;}
+            textarea{height: 220px}
+        }
+
+        .btn{
+            @extend %uncopyable-shared;
+            height: 64px;
+            width: 70%;
+            background: $main_theme;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 21px;
+            font-weight: 500;
+            color: $text_header;
+
+            &:hover{background: $hover;}
+        }
+    }
+
+    .active{
+        transform: scale(1);
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .feedback_form_wrapper{
+        .feedback_form_window{
+            width: max-content;
+        }
+    }
+}

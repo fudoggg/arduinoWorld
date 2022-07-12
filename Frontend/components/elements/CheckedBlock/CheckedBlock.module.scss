@@ -1,0 +1,52 @@
+@import '../../../styles/template';
+@import '../../../styles/variables';
+
+.checked_block_wrapper{
+    @extend %uncopyable-shared;
+    margin: 12px 0;
+
+    label{
+        padding: 12px;
+        border: 1px solid $border;
+        border-radius: 10px;
+        background: $text_header;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+
+    input{
+        display: none;
+    }
+
+    .active{
+        color: $text_header;
+        background: $main_theme;
+    }
+
+
+    // input{
+    //     height: 62px;
+    //     width: 100%;
+    //     margin-bottom: 16px;
+    // }
+
+    // input[type='text']{
+    //     padding: 8px 12px;
+    //     border: 1px solid #CAD9DA;
+    //     border-radius: 10px;
+    // }
+}
+
+@media all and (max-width: 900px){
+    .checked_block_wrapper{
+        display: flex;
+        gap: 5px;
+
+        label{
+            margin-right: 0px;
+            width: 100%;
+            white-space: nowrap;
+            text-align: center;
+        }
+    }
+}

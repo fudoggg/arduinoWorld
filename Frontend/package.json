@@ -1,0 +1,28 @@
+{
+  "name": "arduino-world",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.5.10",
+    "axios": "^0.26.1",
+    "graphql": "^16.3.0",
+    "js-cookie": "^3.0.1",
+    "moment": "^2.29.1",
+    "next": "12.1.0",
+    "next-pwa": "^5.4.7",
+    "ra-data-graphql": "^3.19.11",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0"
+  }
+}

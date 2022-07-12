@@ -1,0 +1,129 @@
+@import '../../../styles/template';
+@import '../../../styles/variables';
+
+.card_wrapper{
+    display: flex;
+    height: 204px;
+    width: 100%;
+    background: $text_header;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+
+    transition: transform 0.5s;
+
+    .left{
+        @extend %uncopyable-shared;
+        display: flex;
+        justify-content: center;
+        margin-right: 35px;
+
+        .image{
+            height: 160px;
+            width: 160px;
+        }
+
+        img{
+            height: 100%;
+            width: 100%;
+            background: $text_header;
+        }
+    }
+
+    .card_info{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        width: 100%;
+
+        .middle_info{
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-direction: column;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            p{
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+
+            i{
+                margin-top: 14px;
+                font-style: normal;
+                color: $main_theme;    
+            }
+
+            b{
+                display: block;
+                color: $description;
+                font-weight: 300;
+                //max-height: 58px;
+                //overflow: hidden;
+                //text-overflow: ellipsis;
+            }
+        }
+
+        .price_button_block{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            // width: 250px;
+            // width: max-content;
+    
+            p{text-align: right;}
+            h1{
+                font-size: 24px;
+                font-weight: 500;
+                text-align: right;
+            }
+
+            .button_block{
+                display: flex;
+                gap: 15px;
+            }
+        }
+    }
+}
+
+.card_wrapper:hover{
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 1280px) {
+    .card_wrapper {
+        gap: 20px;
+        flex-wrap: wrap;
+        height: fit-content;
+        //width: 80vw;
+
+        .left{
+            margin: 0;
+            width: 100%;
+
+        }
+
+        .card_info{
+            flex-wrap: wrap;
+            gap: 20px;
+
+
+            .price_button_block{
+                width: 100%;
+                h1{text-align: left;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card_wrapper {
+        grid-template-rows: 112px 1fr 120px ;
+        .content{ padding: 48px clamp(10px, 10vw, 118px) 110px clamp(10px, 10vw, 118px);}
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card_wrapper .content{padding: 48px clamp(10px, 10vw, 118px) 110px clamp(10px, 12vw, 118px);}
+}

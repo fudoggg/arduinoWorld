@@ -1,0 +1,69 @@
+@import '../../../styles/template';
+@import '../../../styles/variables';
+
+.userOrder {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    border: 1px solid $catalog;
+    border-radius: $borderRadius;
+    background: $text_header;
+
+    hr {margin: 20px 0;}
+
+    p {font-size: 18px;}
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+
+        &_dateId {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 12px;
+
+            p {color: $main_theme;}
+        }
+
+        &_priceAddres {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 12px;
+
+            p {text-align: right;}
+            h1 {text-align: right;}
+        }
+    }
+
+    &__status {
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+
+        &_info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: space-between;
+            width: max-content;
+        }
+
+        &_image {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            img {width: 120px;}
+        }
+    }
+}

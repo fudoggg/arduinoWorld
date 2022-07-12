@@ -1,0 +1,29 @@
+
+.flex{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.between{justify-content: space-between;}
+
+._main{
+    align-items: stretch;
+    margin-top: 80px;
+}
+
+// @media screen and (max-width: 1280px) {
+//     .card_wrapper {}
+// }
+
+@media screen and (max-width: 768px) {
+    ._main {
+        margin-top: 0;
+    }
+}
+
+// @media screen and (max-width: 320px) {
+//     .card_wrapper {}
+// }

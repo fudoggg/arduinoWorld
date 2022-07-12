@@ -1,0 +1,53 @@
+@import '../../../styles/variables';
+
+.сounter_wrapper{
+    height: 50px;
+    width: 142px;
+    border: 1px solid $border;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // cursor: pointer;
+
+    input{
+        background: none;
+        border: 0;
+    }
+
+    //спрятать стрелочки вверх/вниз
+    //для Chrome
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    //для Firefox
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+    input[type="number"]:hover,
+    input[type="number"]:focus {
+        -moz-appearance: number-input;
+    }
+
+    input[type='text'], input[type='number']{
+        height: 100%;
+        width: 42px;
+
+        text-align: center;
+        font-size: 22px;
+
+        margin: 0 12px;
+    }
+
+    input[type='button']{
+        cursor: pointer;
+
+        height: 26px;
+        width: 26px;
+
+        font-size: 22px;
+        color: $main_theme;
+    }
+}

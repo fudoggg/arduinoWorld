@@ -1,0 +1,61 @@
+@import '../../../styles/variables';
+
+.nav_bar_wrapper{
+    max-width: 263px;
+    // width: 13.7vw;
+    min-width: 200px;
+    padding: 24px 20px 20px 20px;
+    color: $black;
+
+    background: $text_header;
+    border-radius: 10px;
+
+    p{
+        display: inline;
+        cursor: pointer;
+    }
+
+    .back{
+        color: $main_theme;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $catalog;
+    }
+
+    .list{
+        div{
+            padding: 14px 0;
+            color: $link;
+
+            &::before{
+                content: "";
+                display: inline-block;
+                height: 19px;
+                margin-right: 5px;
+                border-left: 2px solid transparent;
+                vertical-align: middle;
+            }
+        }
+
+        div:hover{color: $hover;}
+
+        .active{color: $link;}
+        .active::before{border-left: 2px solid $link;}
+    } 
+}
+
+// @media screen and (max-width: 1280px) {
+//     .card_wrapper {
+
+//     }
+// }
+
+@media screen and (max-width: 768px) {
+    .nav_bar_wrapper {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+// @media screen and (max-width: 320px) {
+//     .card_wrapper .content{padding: 48px clamp(10px, 10vw, 118px) 110px clamp(10px, 12vw, 118px);}
+// }

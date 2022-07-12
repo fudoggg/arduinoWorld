@@ -1,0 +1,13 @@
+
+
+.about_wrapper{
+    width: 50vw;
+    h2{margin-bottom: 16px;}
+    p{margin-bottom: 12px}
+}
+
+@media all and (max-width: 900px){
+    .about_wrapper{
+        width: 100%;
+    }
+}
